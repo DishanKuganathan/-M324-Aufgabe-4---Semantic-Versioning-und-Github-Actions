@@ -11,7 +11,7 @@ if echo "$commit_msg" | grep -qE 'BREAKING CHANGE:|!'; then bump="major"
 elif echo "$commit_msg" | grep -qE '^feat(\([^)]+\))?: '; then bump="minor"
 elif echo "$commit_msg" | grep -qE '^(fix|perf|refactor|revert|build|ci|chore|style|test|docs)(\([^)]+\))?: '; then bump="patch"
 else exit 0
-
+fi
 
 # zerlegt den neusten tag auf major, minor und patch
 IFS=. read -r maj min pat <<< "${latest_tag#v}"

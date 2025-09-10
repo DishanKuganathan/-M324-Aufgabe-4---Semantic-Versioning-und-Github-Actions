@@ -5,6 +5,9 @@
 git config --global user.name "github-actions[bot]"
 git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+# alle Tags vom Remote holen
+git fetch --tags
+
 # holt neusten tag
 latest_tag=$(git tag --list "v[0-9]*" --sort=-v:refname | head -n1)
 # holt neusten commitmsg

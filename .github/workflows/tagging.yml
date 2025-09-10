@@ -3,7 +3,7 @@ name: Semantic Versioning Tagging
 on:
   push:
     branches:
-      - main   
+      - main
 
 jobs:
   tagging:
@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run tagging script
         run: bash ./vue-project/commitScript/semServScript.sh
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push new tag
         run: git push origin --tags

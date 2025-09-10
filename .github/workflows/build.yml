@@ -23,6 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        working-directory: ./vue-project
 
       - name: Build Project
         run: npm run build
+        working-directory: ./vue-project

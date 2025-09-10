@@ -1,13 +1,16 @@
 name: Semantic Versioning Tagging
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Build Project"]
+    types:
+      - completed
 
 jobs:
   tagging:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
 
     steps:
       - name: Checkout repository

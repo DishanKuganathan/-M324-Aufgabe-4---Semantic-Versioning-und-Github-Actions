@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# test ob tags erstellt werden können
+# test ob tags erstellt werden können2
 # Git Identity für den Runner setzen 
 git config --global user.name "github-actions[bot]"
 git config --global user.email "github-actions[bot]@users.noreply.github.com"

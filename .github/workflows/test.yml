@@ -1,13 +1,9 @@
 name: Run Unit Tests
 
-
 on:
-  push:                 
+  push:
     branches:
-      - '**'
-  pull_request:         
-    branches:
-      - main  
+      - main
 
 jobs:
   test:

@@ -8,7 +8,6 @@ on:
 jobs:
   tagging:
     runs-on: ubuntu-latest
-  # if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
 
     steps:
       - name: Checkout repository

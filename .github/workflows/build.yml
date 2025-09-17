@@ -2,9 +2,11 @@ name: build
 
 on:
   workflow_run:
-    workflows: ["tests"]
+    workflows: ["test"]
     types:
       - completed
+  pull_request:         
+
 
 jobs:
   build:

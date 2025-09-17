@@ -1,8 +1,8 @@
-name: Build Project
+name: build
 
 on:
   workflow_run:
-    workflows: ["Run Unit Tests"]
+    workflows: ["tests"]
     types:
       - completed
 

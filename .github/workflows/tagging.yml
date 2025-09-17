@@ -1,11 +1,11 @@
-name: Semantic Versioning Tagging
+name: tagging
 
 on:
   push: 
     branches:
       - main
   workflow_run:
-    workflows: ["Build Project"]
+    workflows: ["build"]
     types:
       - completed
 

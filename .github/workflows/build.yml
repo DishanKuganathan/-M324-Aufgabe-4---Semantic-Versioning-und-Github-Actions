@@ -1,8 +1,13 @@
 name: build
 
 on:
-  pull_request:         
+  workflow_run:
+    workflows: ["test"]
+    types:
+      - completed
 
+permissions:
+  contents: read
 
 jobs:
   build:

@@ -28,6 +28,11 @@ jobs:
       - name: Build Project
         run: npm run build
         working-directory: ./vue-project
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: ./vue-project/dist
 
   deploy:
     runs-on: ubuntu-latest
@@ -35,6 +40,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: ./vue-project/dist
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:

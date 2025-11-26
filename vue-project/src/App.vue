@@ -11,7 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
       <HelloWorld msg="Yous" />
       <HelloWorld msg="Yous" />
       <HelloWorld msg="Yous" />
-      <HelloWorld msg="Youssssadasojdiasjduhnujsnd" />
+      <HelloWorld msg="Test if 2.4 work" />
     </div>
   </header>
 

@@ -29,7 +29,7 @@ jobs:
         run: npm run build
         working-directory: ./vue-project
       - name: Upload Build Artifacts
-        uses: actions/upload-artifact@vmain
+        uses: actions/upload-artifact@main
         with:
           name: dist
           path: ./vue-project/dist

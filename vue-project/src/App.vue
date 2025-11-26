@@ -11,7 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
       <HelloWorld msg="Yous" />
       <HelloWorld msg="Yous" />
       <HelloWorld msg="Yous" />
-      <HelloWorld msg="Yous" />
+      <HelloWorld msg="Youssssadasojdiasjduhnujsnd" />
     </div>
   </header>
 
